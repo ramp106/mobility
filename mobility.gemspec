@@ -35,8 +35,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency 'yard', '~> 0.9.0'
 
-  spec.cert_chain = ["certs/shioyama.pem"]
-  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
+  # spec.cert_chain = ["certs/shioyama.pem"]
+  # spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
 
   spec.post_install_message = %q{
 Warning: Mobility v1.3.x includes potentially backwards-incompatible changes

@@ -52,6 +52,12 @@ To release a new version, you need to:
 3. run script in terminal
 ```ruby
   rm mobility-*.gem
+  mkdir -p ~/.gem
+  touch ~/.gem/credentials
+  chmod 600 ~/.gem/credentials
+  printf -- "---\n:github: Bearer ${{ GITHUB_TOKEN }}\n" > ~/.gem/credentials
   gem build mobility
   gem push mobility-*.gem --key github --host https://rubygems.pkg.github.com/ramp106
 ```
+
+GITHUB_TOKEN must have write access to the repo.
